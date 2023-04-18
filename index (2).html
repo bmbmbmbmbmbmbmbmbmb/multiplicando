@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+
+    <script>
+                
+        function gerarTabuada() {
+
+            var numero = parseInt(document.getElementById('numero').value)
+            var tabela = document.getElementById('tabela-tabuada');
+
+            tabela.innerHTML = ""
+
+            for (var i = 1; i <= 10; i++) {
+
+                var resultado = numero * i
+                var linha = '<tr><td>' + numero + "x " + i + "</td></tr>" + resultado + "</td></tr>";
+
+
+                tabela.innerHTML += linha
+            }
+
+        }
+
+       
+    </script>
+
+</head>
+
+<body>
+
+    <header id="head">
+      <button id="toggle-mode">Dia / noite</button>
+    </header>
+
+    <h1>tabuada</h1>
+    <p>digite um valor para gerar sua tabuada:</p>
+
+    <input type="text" id="numero">
+    <button onclick="gerarTabuada()">Gerar tabuada
+    </button>
+    <table id="tabela-tabuada"></table>
+
+</body>
+
+</html>
